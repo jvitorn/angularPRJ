@@ -17,6 +17,9 @@ export class CreditoComponent implements OnInit {
     this.valorInicial = 10;
 
   }
+  deposito(valorInserido:number){
+    this.valorInicial = this.saldo.saldo(this.valorInicial,valorInserido);
+  }
   desconto(valorInserido:number){
     this.valorInicial = this.descontar.descontar(this.valorInicial);
   }
